@@ -9,16 +9,18 @@ const initialState = {
 export default function (state = initialState, action) {
   switch (action.type) {
     case LOAD_PAGE_REQUEST:
-      return Object.assign({}, state, {
+      return {
+        ...state,
         loading: true
-      })
+      }
 
     case LOAD_PAGE:
-      return Object.assign({}, state, {
+      return {
+        ...state,
         page: action.payload.page,
         photos: action.payload.photos,
         loading: false
-      })
+      }
 
     default:
       return state
