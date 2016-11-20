@@ -6,12 +6,12 @@ import fetchPage from '../actions/fetchPage'
 import './PhotoList.css'
 
 class PhotoList extends React.Component {
-  componentWillMount () {
+  componentDidMount () {
     this.props.fetchPage(+this.props.params.page || 1)
   }
-  componentWillReceiveProps (nextProps) {
-    if (nextProps.params.page !== this.props.params.page) {
-      this.props.fetchPage(+nextProps.params.page || 1)
+  componentDidUpdate (prevProps) {
+    if (this.props.params.page !== prevProps.params.page) {
+      this.props.fetchPage(+this.props.params.page || 1)
     }
   }
   render () {
