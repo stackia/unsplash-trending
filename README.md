@@ -1,5 +1,7 @@
 ## Trend photos on Unsplash.com
 
+A quick preview: https://stackia.github.io/unsplash-trending
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app) with the following additional libraries:
 
 * [bootstrap](http://getbootstrap.com/)
